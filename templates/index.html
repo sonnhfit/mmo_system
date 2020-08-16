@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>Danh sách facebook users</h2>
+<ul>
+    {% for user in users %}
+    <li>{{ user }}</li>
+    {% endfor %}
+</ul>
+
+<h3>Nhập vào ID bài viết cần like</h3>
+<form action="" method="post">
+    <input type="text" placeholder="nhap vao a" name="so1">
+    <input type="text" placeholder="nhap vao b" name="so2">
+     {% csrf_token %}
+    <input type="submit">
+</form>
+
+ket qua la: {{ ketqua }}
+</body>
+</html>
