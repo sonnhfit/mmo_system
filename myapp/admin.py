@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import (FacebookUser, FacebookDevice,
-                     User, PaymentHistory, RegisterService
+                     User, PaymentHistory, RegisterService, FacebookAction, FacebookActionScript, FaceActScri
                      )
 
 # Register your models here.
@@ -28,3 +28,7 @@ admin.site.register(FacebookDevice)
 admin.site.register(FacebookUser, FaceBookUserAdmin)
 admin.site.register(PaymentHistory, PaymentHistoryAdmin)
 admin.site.register(RegisterService, RegisterServiceAdmin)
+admin.site.register(FacebookAction)
+admin.site.register(FacebookActionScript)
+admin.site.register(FaceActScri)
+

@@ -59,3 +59,26 @@ class RegisterService(models.Model):
     def __str__(self):
         return self.user.username
 
+
+class FacebookAction(models.Model):
+    action_code = models.CharField(max_length=50)
+    action_name = models.CharField(max_length=255)
+    action_desc = models.TextField()
+
+    def __str__(self):
+        return self.action_code
+
+
+class FacebookActionScript(models.Model):
+    script_code = models.CharField(max_length=50)
+    script_name = models.CharField(max_length=255)
+    script_desc = models.TextField()
+
+    def __str__(self):
+        return self.script_code
+
+
+class FaceActScri(models.Model):
+    facebook_action = models.ForeignKey(FacebookAction, on_delete=models.CASCADE)
+    facebook_action_script = models.ForeignKey(FacebookActionScript, on_delete=models.CASCADE)
+
